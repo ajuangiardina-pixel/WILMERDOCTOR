@@ -423,6 +423,15 @@
     <!-- AOS Animation Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        document.querySelectorAll('.section-title, .section-subtitle').forEach(el => el.setAttribute('data-aos', 'fade-up'));
+        document.querySelectorAll('.result-item, .procedure-card, .testimonial-card').forEach((el, index) => {
+            el.setAttribute('data-aos', 'zoom-in');
+            el.setAttribute('data-aos-delay', (index % 3) * 100);
+        });
+        document.querySelectorAll('.about-image, .contact-form, .info-item').forEach(el => el.setAttribute('data-aos', 'fade-right'));
+        document.querySelectorAll('.about-content, .contact-details').forEach(el => el.setAttribute('data-aos', 'fade-left'));
+        document.querySelectorAll('video').forEach(el => el.setAttribute('data-aos', 'fade-up'));
+
         AOS.init({
             duration: 1000,
             once: true,
