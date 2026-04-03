@@ -14,10 +14,11 @@
         rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="favicon1.jpg">
+    <!-- Animaciones Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -25,8 +26,8 @@
     <!-- Header / Navbar -->
     <header class="header">
         <div class="container navbar">
-            <a href="#" class="logo" style="display: block; position: relative; z-index: 9999; line-height: 0;">
-                <img src="favicon1.jpg" alt="Dr. Wilmer Jimenez" style="width: 60px; height: 60px; min-width: 60px; min-height: 60px; object-fit: contain; border-radius: 8px; display: block;">
+            <a href="#" class="logo" style="display: flex; align-items: center; padding: 5px 0;">
+                <img src="favicon1.jpg" alt="Dr. Wilmer Jimenez" style="height: 60px; width: 60px; min-width: 60px; object-fit: contain; border-radius: 8px;">
             </a>
             <nav class="nav-menu">
                 <ul class="nav-list">
@@ -51,7 +52,7 @@
             <div class="text-center" style="margin-bottom: 2.5rem; display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
                 <img src="favicon1.jpg" alt="Logo Doctor Wilmer Jiménez" style="width: 100%; max-width: 200px; aspect-ratio: 1/1; object-fit: contain; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
             </div>
-            <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-header text-center" data-aos="fade-up" data-aos-duration="1000">
                 <h2 class="section-title">Resultados reales de pacientes</h2>
                 <div class="title-divider center"></div>
                 <p class="section-subtitle">Cambios visibles, naturales y seguros. Experimenta transformaciones reales.
@@ -59,7 +60,7 @@
             </div>
 
             <div class="results-grid">
-                <div class="result-item" data-aos="fade-up">
+                <div class="result-item" data-aos="zoom-in" data-aos-delay="100">
                     <div class="result-img-wrapper" style="display: flex;">
                         <div style="flex: 1; position: relative;">
                             <img src="segu_Img/antes1.jpeg" alt="Antes" style="width: 100%; height: 100%; object-fit: cover;">
@@ -72,7 +73,7 @@
                     </div>
                     <div class="result-caption">Liposcultura</div>
                 </div>
-                <div class="result-item" data-aos="fade-up">
+                <div class="result-item" data-aos="zoom-in" data-aos-delay="100">
                     <div class="result-img-wrapper" style="display: flex;">
                         <div style="flex: 1; position: relative;">
                             <img src="segu_Img/antes2.jpeg" alt="Antes" style="width: 100%; height: 100%; object-fit: cover;">
@@ -85,7 +86,7 @@
                     </div>
                     <div class="result-caption">Rinoplastía</div>
                 </div>
-                <div class="result-item" data-aos="fade-up">
+                <div class="result-item" data-aos="zoom-in" data-aos-delay="100">
                     <div class="result-img-wrapper" style="display: flex;">
                         <div style="flex: 1; position: relative;">
                             <img src="segu_Img/antes3.jpeg" alt="Antes" style="width: 100%; height: 100%; object-fit: cover;">
@@ -105,7 +106,7 @@
     <!-- El Doctor Trabajando -->
     <section id="inicio" class="video-section section-padding">
         <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-header text-center" data-aos="fade-up" data-aos-duration="1000">
                 <h2 class="section-title">El doctor trabajando</h2>
                 <div class="title-divider center"></div>
                 <p class="section-subtitle">Conoce de cerca nuestro compromiso, profesionalismo y dedicación.</p>
@@ -167,7 +168,7 @@
     <!-- Procedimientos -->
     <section id="procedimientos" class="procedures section-padding bg-light">
         <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-header text-center" data-aos="fade-up" data-aos-duration="1000">
                 <h2 class="section-title">Procedimientos</h2>
                 <div class="title-divider center"></div>
                 <p class="section-subtitle">Opciones quirúrgicas adaptadas a tus necesidades para lograr la mejor
@@ -176,7 +177,7 @@
 
             <div class="procedures-grid">
                 <!-- Card 1 -->
-                <div class="procedure-card" data-aos="flip-up">
+                <div class="procedure-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="procedure-content text-center"
                         style="display: flex; align-items: center; justify-content: center; min-height: 150px;">
                         <h3 style="margin-bottom: 0;">✨ Liposcultura</h3>
@@ -184,7 +185,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="procedure-card">
+                <div class="procedure-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="procedure-content text-center"
                         style="display: flex; align-items: center; justify-content: center; min-height: 150px;">
                         <h3 style="margin-bottom: 0;">💉 Aumento mamario</h3>
@@ -192,7 +193,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="procedure-card">
+                <div class="procedure-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="procedure-content text-center"
                         style="display: flex; align-items: center; justify-content: center; min-height: 150px;">
                         <h3 style="margin-bottom: 0;">👃 Rinoplastía</h3>
@@ -200,7 +201,7 @@
                 </div>
 
                 <!-- Card 4 -->
-                <div class="procedure-card">
+                <div class="procedure-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="procedure-content text-center"
                         style="display: flex; align-items: center; justify-content: center; min-height: 150px;">
                         <h3 style="margin-bottom: 0;">🏥 Dermolipectomía</h3>
@@ -208,7 +209,7 @@
                 </div>
 
                 <!-- Card 5 -->
-                <div class="procedure-card">
+                <div class="procedure-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="procedure-content text-center"
                         style="display: flex; align-items: center; justify-content: center; min-height: 150px;">
                         <h3 style="margin-bottom: 0;">⚕️ Lipopapada</h3>
@@ -216,7 +217,7 @@
                 </div>
 
                 <!-- Card 6 -->
-                <div class="procedure-card">
+                <div class="procedure-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="procedure-content text-center"
                         style="display: flex; align-items: center; justify-content: center; min-height: 150px;">
                         <h3 style="margin-bottom: 0;">🔹 Cirugía corporal estética</h3>
@@ -229,7 +230,7 @@
     <!-- Fotos del Doctor Trabajando -->
     <section id="seguridad" class="trust section-padding bg-dark text-white">
         <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-header text-center" data-aos="fade-up" data-aos-duration="1000">
                 <h2 class="section-title text-white">Tu seguridad en manos profesionales</h2>
                 <div class="title-divider center light"></div>
                 <p class="section-subtitle">Entorno clínico de primer nivel, tecnología avanzada y un equipo médico
@@ -237,7 +238,7 @@
             </div>
 
             <div class="trust-gallery" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-                <div class="trust-img" data-aos="zoom-in">
+                <div class="trust-img">
                     <img src="resu_Img/WhatsApp%20Image%202026-04-01%20at%2018.44.50.jpeg" alt="Doctor">
                     <div class="trust-overlay">Doctor</div>
                 </div>
@@ -260,7 +261,7 @@
     <!-- Testimonios -->
     <section id="testimonios" class="testimonials section-padding bg-light">
         <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-header text-center" data-aos="fade-up" data-aos-duration="1000">
                 <h2 class="section-title">Testimonios</h2>
                 <div class="title-divider center"></div>
                 <p class="section-subtitle">Lo que dicen nuestros pacientes sobre su experiencia y transformación.</p>
@@ -369,14 +370,13 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-top">
-            <div class="container footer-grid">
-                <div class="footer-col" data-aos="fade-up">
+        <div class="container footer-container">
+            <div class="footer-col">
                 <h3>Dr. Wilmer Jimenez</h3>
                 <p>Cirugía estética y reconstructiva enfocada en resultados naturales, seguros y personalizados. Tu
                     bienestar es nuestra prioridad.</p>
             </div>
-            <div class="footer-col" data-aos="fade-up">
+            <div class="footer-col">
                 <h3>Servicios Médicos</h3>
                 <ul>
                     <li><a href="#procedimientos">Lipoescultura (Tradicional y HD)</a></li>
@@ -417,6 +417,8 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <script src="script.js"></script>
+    <!-- AOS Scroll Animations -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
@@ -425,6 +427,6 @@
             offset: 50
         });
     </script>
-    <script src="script.js"></script>
 </body>
+
 </html>
