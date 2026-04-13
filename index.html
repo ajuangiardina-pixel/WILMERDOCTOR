@@ -1,666 +1,403 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Wilmer Jimenez | Cirugía Estética y Reconstructiva</title>
-    <meta name="description"
-        content="Dr. Wilmer Jimenez, especialista en cirugía estética y reconstructiva. Resultados naturales, seguros y personalizados.">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- AOS Animations CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <!-- Favicon & Touch Icons -->
-    <link rel="icon" type="image/jpeg" sizes="32x32" href="favicon1.jpg?v=2">
-    <link rel="icon" type="image/jpeg" sizes="16x16" href="favicon1.jpg?v=2">
-    <link rel="apple-touch-icon" href="favicon1.jpg?v=2">
-    <link rel="shortcut icon" href="favicon1.jpg?v=2">
+    <title>Juan Giardina - Tu oportunidad empieza hoy</title>
+    <meta name="description" content="Descubrí como podes trabajar desde tu casa, sin necesidad de salir a la calle.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos adicionales específicos para esta versión */
+        .hero-name {
+            font-size: 1rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            color: #ffffff;
+            opacity: 0.8;
+            font-family: var(--font-main);
+        }
+        
+        .hero-large-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            background: linear-gradient(to right, #ffffff, #e60000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-detailed-subtitle {
+            font-size: 1.25rem;
+            color: #b3b3b3;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        .hero-bullets {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 40px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .hero-bullets p {
+            margin: 0;
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .steps-block {
+            background-color: #0d0d0d;
+            border: 1px solid var(--color-border);
+            border-radius: 15px;
+            padding: 40px;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .step-item {
+            margin-bottom: 30px;
+        }
+        
+        .step-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-item h3 {
+            color: var(--color-primary);
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .step-item p {
+            font-size: 1.2rem;
+            color: #ffffff;
+            line-height: 1.5;
+        }
+
+        .whatsapp-contact {
+            margin-top: 40px;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: #25D366;
+            color: #fff !important;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .whatsapp-contact:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-icon {
+            width: 25px;
+            height: 25px;
+            fill: #ffffff;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .advantage-card {
+            background: #000000;
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: left;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-primary);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+
+        .adv-icon {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 15px;
+        }
+
+        .adv-text {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .adv-text strong {
+            display: block;
+            margin-bottom: 8px;
+            color: #ffffff;
+            font-size: 1.2rem;
+        }
+
+        /* Adjustments for centering and removing unneeded header space */
+        body {
+            padding-top: 0;
+        }
+        
+        .hero {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            min-height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero-large-title {
+                font-size: 2.3rem;
+            }
+            .hero-detailed-subtitle {
+                font-size: 1.1rem;
+            }
+            .steps-block {
+                padding: 25px;
+            }
+            .step-item h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
-    <!-- Header / Navbar -->
-    <header class="header">
-        <div class="container navbar">
-            <a href="#" class="logo" style="display: flex; align-items: center; padding: 5px 0;">
-                <img src="favicon1.jpg?v=2" alt="Dr. Wilmer Jimenez" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px;">
-            </a>
-            <nav class="nav-menu">
-                <ul class="nav-list">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#sobre-mi">Sobre mí</a></li>
-                    <li><a href="#procedimientos">Procedimientos</a></li>
-                    <li><a href="#resultados">Resultados</a></li>
-                    <li><a href="#seguridad">Seguridad</a></li>
-                    <li><a href="#testimonios">Testimonios</a></li>
-                </ul>
-            </nav>
-            <a href="#contacto" class="btn btn-outline nav-btn">Contacto</a>
-            <button class="menu-toggle" aria-label="Abrir menú">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </header>
-
-    <!-- Resultados Reales -->
-    <section id="resultados" class="results section-padding" style="padding-top: 120px; background-image: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0) 100%), url('resu_Img/banner.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        <div class="container">
-            <div class="text-center" style="margin-bottom: 2.5rem; display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
-                <img src="favicon1.jpg" alt="Logo Doctor Wilmer Jiménez" style="width: 100%; max-width: 200px; aspect-ratio: 1/1; object-fit: contain; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
-            </div>
-            <div class="section-header text-center">
-                <h2 class="section-title">Resultados reales de pacientes</h2>
-                <div class="title-divider center"></div>
-                <p class="section-subtitle">Cambios visibles, naturales y seguros. Experimenta transformaciones reales.</p>
-            </div>
-
-            <div class="results-grid">
-                <div class="result-item">
-                    <div class="result-img-wrapper" style="display: flex;">
-                        <div style="flex: 1; position: relative;">
-                            <img src="segu_Img/antes1.jpeg" alt="Antes" style="width: 100%; height: 100%; object-fit: cover;">
-                            <div style="position: absolute; bottom: 10px; left: 10px; background: rgba(0,0,0,0.6); color: white; padding: 4px 10px; font-size: 0.8rem; border-radius: 4px; font-weight: bold;">Antes</div>
-                        </div>
-                        <div style="flex: 1; position: relative;">
-                            <img src="segu_Img/despues1.jpeg" alt="Después" style="width: 100%; height: 100%; object-fit: cover;">
-                            <div style="position: absolute; bottom: 10px; right: 10px; background: rgba(27,73,101,0.8); color: white; padding: 4px 10px; font-size: 0.8rem; border-radius: 4px; font-weight: bold;">Después</div>
-                        </div>
-                    </div>
-                    <div class="result-caption">Lipoescultura HD Masculina</div>
-                </div>
-                <div class="result-item">
-                    <div class="result-img-wrapper" style="display: flex;">
-                        <div style="flex: 1; position: relative;">
-                            <img src="segu_Img/antes2.jpeg" alt="Antes" style="width: 100%; height: 100%; object-fit: cover;">
-                            <div style="position: absolute; bottom: 10px; left: 10px; background: rgba(0,0,0,0.6); color: white; padding: 4px 10px; font-size: 0.8rem; border-radius: 4px; font-weight: bold;">Antes</div>
-                        </div>
-                        <div style="flex: 1; position: relative;">
-                            <img src="segu_Img/despuse2.jpeg" alt="Después" style="width: 100%; height: 100%; object-fit: cover;">
-                            <div style="position: absolute; bottom: 10px; right: 10px; background: rgba(27,73,101,0.8); color: white; padding: 4px 10px; font-size: 0.8rem; border-radius: 4px; font-weight: bold;">Después</div>
-                        </div>
-                    </div>
-                    <div class="result-caption">Rinoplastía</div>
-                </div>
-                <div class="result-item">
-                    <div class="result-img-wrapper" style="display: flex;">
-                        <div style="flex: 1; position: relative;">
-                            <img src="segu_Img/antes3.jpeg" alt="Antes" style="width: 100%; height: 100%; object-fit: cover;">
-                            <div style="position: absolute; bottom: 10px; left: 10px; background: rgba(0,0,0,0.6); color: white; padding: 4px 10px; font-size: 0.8rem; border-radius: 4px; font-weight: bold;">Antes</div>
-                        </div>
-                        <div style="flex: 1; position: relative;">
-                            <img src="segu_Img/despues3.jpeg" alt="Después" style="width: 100%; height: 100%; object-fit: cover;">
-                            <div style="position: absolute; bottom: 10px; right: 10px; background: rgba(27,73,101,0.8); color: white; padding: 4px 10px; font-size: 0.8rem; border-radius: 4px; font-weight: bold;">Después</div>
-                        </div>
-                    </div>
-                    <div class="result-caption">Aumento Mamario</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Más Resultados de Pacientes (Estética Premium) -->
-    <section class="premium-results-section bg-dark section-padding text-white" id="casos-exito">
-        <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
-                <h2 class="section-title text-white">Casos de Éxito</h2>
-                <div class="title-divider center light"></div>
-                <p class="section-subtitle text-white" style="opacity: 0.9;">Antes y Después de nuestros procedimientos quirúrgicos.</p>
-            </div>
-
-            <style>
-                .premium-results-grid {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-                    gap: 3rem;
-                }
-                .premium-result-card {
-                    background: #111;
-                    border-radius: 12px;
-                    overflow: hidden;
-                    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-                    transition: transform 0.4s ease, box-shadow 0.4s ease;
-                    border: 1px solid rgba(255,255,255,0.05);
-                }
-                .premium-result-images {
-                    display: flex;
-                    height: 300px;
-                    position: relative;
-                }
-                .img-container {
-                    flex: 1;
-                    position: relative;
-                    background: #111;
-                    overflow: hidden;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-                .img-container img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover; /* Ajustar y recortar para uniformidad */
-                    object-position: center; /* Centrado de la imagen */
-                    transition: transform 0.6s ease;
-                }
-                
-                /* Efecto Reveal al hacer scroll (AOS) o hover */
-                .premium-result-card.aos-animate .img-container img {
-                    /* filter removido para pruebas */
-                }
-                .premium-result-card:hover .img-container img {
-                    transform: scale(1.05);
-                }
-
-                .premium-divider {
-                    width: 3px;
-                    background: linear-gradient(180deg, transparent, rgba(98, 182, 203, 0.8), transparent);
-                    height: 100%;
-                    z-index: 10;
-                    position: absolute;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    box-shadow: 0 0 15px rgba(98, 182, 203, 0.6);
-                }
-                .img-container .badge {
-                    position: absolute;
-                    bottom: 15px;
-                    background: rgba(0,0,0,0.8);
-                    color: #fff;
-                    padding: 5px 15px;
-                    border-radius: 20px;
-                    font-size: 0.8rem;
-                    font-weight: 600;
-                    letter-spacing: 1px;
-                    border: 1px solid rgba(255,255,255,0.2);
-                    backdrop-filter: blur(5px);
-                    z-index: 15;
-                }
-                .img-container.antes .badge { left: 15px; }
-                .img-container.despues .badge { right: 15px; }
-                .premium-result-info {
-                    padding: 1.5rem;
-                    text-align: center;
-                    font-weight: 600;
-                    font-size: 1.1rem;
-                    color: #fff;
-                    background: linear-gradient(to top, #050505, #151515);
-                    border-top: 1px solid rgba(255,255,255,0.05);
-                }
-                
-                @media (max-width: 768px) {
-                    .premium-result-images {
-                        height: 220px;
-                    }
-                }
-            </style>
+    
+    <!-- PRIMERA SECCIÓN / HERO -->
+    <section class="hero" style="display: flex; align-items: center; text-align: center;">
+        <div class="container hero-container">
+            <div class="hero-name fade-in-up">Juan Giardina</div>
             
-            <div class="premium-results-grid">
-                <!-- Lipo Papada -->
-                <div class="premium-result-card" data-aos="fade-up">
-                    <div class="premium-result-images">
-                        <div class="img-container antes">
-                            <img src="papda_img/papad1.jpeg" alt="Antes Lipo Papada">
-                            <span class="badge">Antes</span>
-                        </div>
-                        <div class="premium-divider"></div>
-                        <div class="img-container despues">
-                            <img src="papda_img/papad2.jpeg" alt="Después Lipo Papada">
-                            <span class="badge">Después</span>
-                        </div>
-                    </div>
-                    <div class="premium-result-info">Lipo papada</div>
-                </div>
+            <h1 class="hero-large-title reveal-text">
+                Hoy te voy a enseñar el método que me dió la libertad de vivir como yo quiero
+            </h1>
+            
+            <p class="hero-detailed-subtitle fade-in-up delay-1">
+                Descubrí como podes trabajar desde tu casa, sin necesidad de salir a la calle ni mucho menos trabajar 8 o 10 horas diarias.<br><br>
+                Si estas dispuesto a cambiar tu vida actual y empezar a construir la vida de tus sueños, seguí los pasos siguientes.
+            </p>
+            
+            <div class="hero-bullets fade-in-up delay-2">
+                <p>✓ No necesitas experiencia.</p>
+                <p>✓ No necesitas productos.</p>
+                <p>✓ Solo necesitas empezar.</p>
+            </div>
+            
+        </div>
+        <div class="hero-bg-glow"></div>
+    </section>
 
-                <!-- Reducción mamaria -->
-                <div class="premium-result-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="premium-result-images">
-                        <div class="img-container antes">
-                            <img src="https://www.doctorwilmerjimenez.com/redu1_img.png" alt="Antes de Reducción mamaria - Dr Wilmer Jimenez" title="Antes de Reducción mamaria">
-                            <span class="badge">Antes</span>
-                        </div>
-                        <div class="premium-divider"></div>
-                        <div class="img-container despues">
-                            <img src="redu_img/REDUCCION2.jpeg?v=2" alt="Después de Reducción mamaria - Dr Wilmer Jimenez" title="Después de Reducción mamaria">
-                            <span class="badge">Después</span>
-                        </div>
-                    </div>
-                    <div class="premium-result-info">Reducción mamaria</div>
+    <!-- SEGUNDA SECCIÓN: PASOS Y WHATSAPP -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container" style="text-align: center;">
+            <div class="steps-block fade-in-up delay-1">
+                <div class="step-item">
+                    <h3>Paso 1</h3>
+                    <p>Mira este video donde te explico todo</p>
                 </div>
+                
+                <div class="step-item" style="margin-top: 40px;">
+                    <h3>Paso 2</h3>
+                    <p>Solo si ya viste la presentación, vas a escribirme por Whatsapp y empezá a construir tu camino al éxito con mi equipo.</p>
+                </div>
+            </div>
 
-                <!-- Recambio de prótesis mas pexia -->
-                <div class="premium-result-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="premium-result-images">
-                        <div class="img-container antes">
-                            <img src="protesis_img/REC1.png" alt="Antes Recambio prótesis">
-                            <span class="badge">Antes</span>
-                        </div>
-                        <div class="premium-divider"></div>
-                        <div class="img-container despues">
-                            <img src="protesis_img/REC2.png" alt="Después Recambio prótesis">
-                            <span class="badge">Después</span>
-                        </div>
-                    </div>
-                    <div class="premium-result-info">Recambio de prótesis + Pexia</div>
-                </div>
-
-                <!-- Lipoescultura 360 -->
-                <div class="premium-result-card" data-aos="fade-up">
-                    <div class="premium-result-images">
-                        <div class="img-container antes">
-                            <img src="lipored_img/lipooo1.png" alt="Antes Lipoescultura 360">
-                            <span class="badge">Antes</span>
-                        </div>
-                        <div class="premium-divider"></div>
-                        <div class="img-container despues">
-                            <img src="lipored_img/lipooo2..jpeg" alt="Después Lipoescultura 360">
-                            <span class="badge">Después</span>
-                        </div>
-                    </div>
-                    <div class="premium-result-info">Lipoescultura 360</div>
-                </div>
-
-                <!-- Aumento Mamario -->
-                <div class="premium-result-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="premium-result-images">
-                        <div class="img-container antes">
-                            <img src="Aumen_img/au1.jpeg" alt="Antes Aumento Mamario">
-                            <span class="badge">Antes</span>
-                        </div>
-                        <div class="premium-divider"></div>
-                        <div class="img-container despues">
-                            <img src="Aumen_img/au2.jpeg" alt="Después Aumento Mamario">
-                            <span class="badge">Después</span>
-                        </div>
-                    </div>
-                    <div class="premium-result-info">Aumento Mamario</div>
-                </div>
-
-                <!-- Lipoescultura 360 con Marcación Soft -->
-                <div class="premium-result-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="premium-result-images">
-                        <div class="img-container antes">
-                            <img src="lipo_img/lip11.jpeg" alt="Antes Lipoescultura 360 con Marcación Soft">
-                            <span class="badge">Antes</span>
-                        </div>
-                        <div class="premium-divider"></div>
-                        <div class="img-container despues">
-                            <img src="lipo_img/lipo22.jpeg" alt="Después Lipoescultura 360 con Marcación Soft">
-                            <span class="badge">Después</span>
-                        </div>
-                    </div>
-                    <div class="premium-result-info">Lipoescultura 360 con Marcación Soft</div>
-                </div>
-
-                <!-- Dermolipectomía -->
-                <div class="premium-result-card" data-aos="fade-up">
-                    <div class="premium-result-images">
-                        <div class="img-container antes">
-                            <img src="dermi_Img/dermo1.jpeg" alt="Antes Dermolipectomía">
-                            <span class="badge">Antes</span>
-                        </div>
-                        <div class="premium-divider"></div>
-                        <div class="img-container despues">
-                            <img src="dermi_Img/dermo2.jpeg" alt="Después Dermolipectomía">
-                            <span class="badge">Después</span>
-                        </div>
-                    </div>
-                    <div class="premium-result-info">Dermolipectomía</div>
-                </div>
-
-                <!-- Dermolipectomía Circunferencial -->
-                <div class="premium-result-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="premium-result-images">
-                        <div class="img-container">
-                            <img src="circun_img.jpeg" alt="Dermolipectomía Circunferencial" style="object-fit: contain; background: #000;">
-                        </div>
-                    </div>
-                    <div class="premium-result-info">Dermolipectomía Circunferencial</div>
-                </div>
+            <div class="fade-in-up delay-2 text-center" style="margin-top: 40px;">
+                <p style="font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 20px; letter-spacing: 1px;">+5491145265406</p>
+                
+                <a href="https://wa.me/5491145265406" target="_blank" class="whatsapp-contact pulse">
+                    <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 413.6c-33.6 0-66.5-9-95.2-26.1l-6.8-4-70.8 18.6 18.9-69-4.4-7C47.2 296.8 38 261 38 223.9 38 121.2 121.2 38 223.9 38c49.8 0 96.6 19.4 131.8 54.6s54.6 82 54.6 131.8c0 102.7-83 185.3-185.3 185.3zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-1.9-3.3.2-5.1 1.9-6.9 1.6-1.6 3.7-4.2 5.5-6.3 1.9-2.1 2.5-3.7 3.7-6.3 1.2-2.6.6-4.9-.3-6.3-1-1.4-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                    </svg>
+                    Contactar por WhatsApp
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- El Doctor Trabajando -->
-    <section id="inicio" class="video-section section-padding">
+    <!-- TERCERA SECCIÓN: TESTIMONIOS -->
+    <section class="testimonials section">
         <div class="container">
-            <div class="section-header text-center">
-                <h2 class="section-title">En quirófano</h2>
-                <div class="title-divider center"></div>
-                <p class="section-subtitle">Conoce de cerca nuestro compromiso, profesionalismo y dedicación.</p>
+            <h2 class="section-title reveal-text" style="font-size: 2.2rem;">Testimonios de mis alumnos que comenzaron conmigo 💪🏽</h2>
+            
+            <div class="grid-3 testimonials-grid" style="margin-top: 40px;">
+                <!-- Video 1 -->
+                <div class="video-card fade-in-up">
+                    <div class="video-wrapper">
+                        <video controls preload="metadata">
+                            <source src="testifran_vid/fran%20guerrero.MP4" type="video/mp4">
+                            Tu navegador no soporta el formato de video.
+                        </video>
+                    </div>
+                </div>
+                <!-- Video 2 -->
+                <div class="video-card fade-in-up delay-1">
+                    <div class="video-wrapper">
+                        <video controls preload="metadata">
+                            <source src="testijuan_vid/IMG_7566.MP4" type="video/mp4">
+                            Tu navegador no soporta el formato de video.
+                        </video>
+                    </div>
+                </div>
+                <!-- Video 3 -->
+                <div class="video-card fade-in-up delay-2">
+                    <div class="video-wrapper">
+                        <video controls preload="metadata">
+                            <source src="testimilton_vid/daro.MP4" type="video/mp4">
+                            Tu navegador no soporta el formato de video.
+                        </video>
+                    </div>
+                </div>
             </div>
-            <div style="max-width: 800px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
-                <video src="comotrabaja_vid/WhatsApp%20Video%202026-04-03%20at%2016.46.43.mp4" controls autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+
+            <div class="social-proof-images" style="margin-top: 80px;">
+                <h3 class="subsection-title reveal-text" style="text-align: center; margin-bottom: 40px; font-size: 1.8rem; font-weight: 700;">Mas casos de éxito de mi equipo</h3>
+                <div class="grid-3 proof-grid">
+                    <div class="proof-card scale-in delay-1">
+                        <img src="telegram1_img/testimoniotelegram1.PNG" alt="Caso de éxito" class="responsive-img">
+                    </div>
+                    <div class="proof-card scale-in delay-2">
+                        <img src="telegram2_img/IMG_0887.PNG" alt="Caso de éxito" class="responsive-img">
+                    </div>
+                    <div class="proof-card scale-in delay-3">
+                        <img src="telegram3_img/IMG_0886.PNG" alt="Caso de éxito" class="responsive-img">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Sobre el Doctor -->
-    <section id="sobre-mi" class="about section-padding">
-        <div class="container about-container">
-            <div class="about-image" style="display: block; visibility: visible; opacity: 1; min-height: 200px; min-width: 200px;">
-                <!-- Por favor, reemplaza esta imagen con la foto real del doctor -->
-                <img src="sobre_im.jpeg" alt="Dr. Wilmer Jimenez - Cirujano Plástico Estético y Reconstructivo en Buenos Aires" title="Dr. Wilmer Jimenez - Cirujano Plástico">
-            </div>
-            <div class="about-content">
-                <h2 class="section-title">Sobre el Doctor</h2>
-                <p style="font-size: 1.2rem; font-weight: 600; color: var(--clr-medical-blue); margin-bottom: 0.5rem; margin-top: -0.5rem;">Cirujano plástico - estético y reconstructivo</p>
-                <div class="title-divider"></div>
-                <p class="bio-text">Dedicado a la excelencia médica y la atención personalizada, mi objetivo es
-                    acompañarte en tu transformación garantizando la máxima seguridad y bienestar en cada etapa.</p>
+    <!-- CUARTA SECCIÓN: VENTAJAS -->
+    <section class="section">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title reveal-text">Ventajas del marketing de afiliados</h2>
+            
+            <div class="advantages-grid">
+                <div class="advantage-card fade-in-up delay-1">
+                    <div class="adv-icon">📱</div>
+                    <div class="adv-text">
+                        <strong>Trabajas con y desde tu celular.</strong>
+                        Tenes libertad de tiempo sin depender de nadie.
+                    </div>
+                </div>
+                
+                <div class="advantage-card fade-in-up delay-2">
+                    <div class="adv-icon">📈</div>
+                    <div class="adv-text">
+                        <strong>100% escalable.</strong>
+                        No tenes limite de venta, podes vender todas las membresías de forma ilimitada sin renovar productos ni proveedores.
+                    </div>
+                </div>
 
-                <ul class="about-list">
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <div>
-                            <h3>Experiencia profesional</h3>
-                            <p>Años de trayectoria brindando resultados de alta calidad.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fas fa-user-md"></i>
-                        <div>
-                            <h3>Especialización en cirugía estética</h3>
-                            <p>Técnicas modernas y actualizadas para resultados naturales.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fas fa-comments"></i>
-                        <div>
-                            <h3>Atención personalizada</h3>
-                            <p>Cada paciente recibe un plan quirúrgico diseñado a su medida.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fas fa-shield-alt"></i>
-                        <div>
-                            <h3>Enfoque en seguridad del paciente</h3>
-                            <p>Protocolos estrictos en cada intervención quirúrgica.</p>
-                        </div>
-                    </li>
-                </ul>
+                <div class="advantage-card fade-in-up delay-3">
+                    <div class="adv-icon">🎓</div>
+                    <div class="adv-text">
+                        <strong>Sistema educativo.</strong>
+                        Contas con clases en vivo para tener resultados mas rápidos y efectivos.
+                    </div>
+                </div>
+
+                <div class="advantage-card fade-in-up delay-1">
+                    <div class="adv-icon">🚀</div>
+                    <div class="adv-text">
+                        <strong>No necesitas experiencia.</strong>
+                        Dentro de este sistema vas a aprender todo desde 0.
+                    </div>
+                </div>
+
+                <div class="advantage-card fade-in-up delay-2">
+                    <div class="adv-icon">💰</div>
+                    <div class="adv-text">
+                        <strong>Por cada venta te llevas un 90% directo a tu cuenta o billetera virtual.</strong>
+                        Nadie cobra lo que vendes mas que vos.
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Procedimientos -->
-    <section id="procedimientos" class="procedures section-padding bg-light">
+    <!-- QUINTA SECCIÓN: PREGUNTAS FRECUENTES -->
+    <section class="faq section">
+        <div class="container faq-container">
+            <h2 class="section-title reveal-text">Preguntas Frecuentes</h2>
+            <div class="faq-list">
+                <div class="faq-item fade-in-up delay-1">
+                    <button class="faq-question">
+                        <span>Necesito experiencia para esto?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No necesitas ninguna experiencia previa. Te enseñamos todo desde cero dentro del sistema educativo.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in-up delay-2">
+                    <button class="faq-question">
+                        <span>En cuanto tiempo hago mi primera venta?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Los resultados varían según la dedicación, pero contamos con estrategias paso a paso para que logres tus primeras ventas lo antes posible.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in-up delay-3">
+                    <button class="faq-question">
+                        <span>El pago es por única vez?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, realizas el pago por única vez y obtenés acceso de por vida al sistema y a todas sus actualizaciones.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in-up delay-1">
+                    <button class="faq-question">
+                        <span>Necesito computadora para empezar?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No es obligatorio. Puedes trabajar perfectamente con y desde tu celular con conexión a internet.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in-up delay-2">
+                    <button class="faq-question">
+                        <span>Necesito usar mis redes sociales?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, el marketing de afiliados aprovecha el alcance de las redes, pero te enseñaremos a hacerlo de manera profesional, incluso si empiezas con cuentas nuevas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" style="padding: 40px 0; font-size: 0.9rem; color: #555; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 50px;">
         <div class="container">
-            <div class="section-header text-center">
-                <h2 class="section-title">Procedimientos</h2>
-                <div class="title-divider center"></div>
-                <p class="section-subtitle">Opciones quirúrgicas adaptadas a tus necesidades para lograr la mejor
-                    versión de ti.</p>
-            </div>
-
-            <div class="procedures-grid">
-                <!-- Card 1 -->
-                <div class="procedure-card">
-                    <div class="procedure-content text-center"
-                        style="display: flex; align-items: center; justify-content: center; min-height: 150px;">
-                        <h3 style="margin-bottom: 0;">✨ Lipoescultura HD Masculina</h3>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="procedure-card">
-                    <div class="procedure-content text-center"
-                        style="display: flex; align-items: center; justify-content: center; min-height: 150px;">
-                        <h3 style="margin-bottom: 0;">💉 Aumento mamario</h3>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="procedure-card">
-                    <div class="procedure-content text-center"
-                        style="display: flex; align-items: center; justify-content: center; min-height: 150px;">
-                        <h3 style="margin-bottom: 0;">👃 Rinoplastía</h3>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="procedure-card">
-                    <div class="procedure-content text-center"
-                        style="display: flex; align-items: center; justify-content: center; min-height: 150px;">
-                        <h3 style="margin-bottom: 0;">🏥 Dermolipectomía</h3>
-                    </div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="procedure-card">
-                    <div class="procedure-content text-center"
-                        style="display: flex; align-items: center; justify-content: center; min-height: 150px;">
-                        <h3 style="margin-bottom: 0;">⚕️ Lipopapada</h3>
-                    </div>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="procedure-card">
-                    <div class="procedure-content text-center"
-                        style="display: flex; align-items: center; justify-content: center; min-height: 150px;">
-                        <h3 style="margin-bottom: 0;">🔹 Cirugía corporal estética</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Fotos del Doctor Trabajando -->
-    <section id="seguridad" class="trust section-padding bg-dark text-white">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2 class="section-title text-white">Tu seguridad en manos profesionales</h2>
-                <div class="title-divider center light"></div>
-                <p class="section-subtitle">Entorno clínico de primer nivel, tecnología avanzada y un equipo médico
-                    altamente calificado.</p>
-            </div>
-
-            <div class="trust-gallery" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-                <div class="trust-img">
-                    <img src="resu_Img/WhatsApp%20Image%202026-04-01%20at%2018.44.50.jpeg" alt="Doctor">
-                    <div class="trust-overlay">Doctor</div>
-                </div>
-                <div class="trust-img">
-                    <img src="sobre_img/WhatsApp%20Image%202026-04-01%20at%2018.44.50.jpeg" alt="Entorno quirúrgico">
-                    <div class="trust-overlay">Entorno quirúrgico</div>
-                </div>
-                <div class="trust-img">
-                    <img src="resu_Img/WhatsApp%20Image%202026-04-01%20at%2018.44.51.jpeg" alt="Doctor trabajando">
-                    <div class="trust-overlay">Trabajando</div>
-                </div>
-                <div class="trust-img">
-                    <img src="resu_Img/WhatsApp%20Image%202026-04-01%20at%2018.53.02.jpeg" alt="En consulta">
-                    <div class="trust-overlay">En consulta</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonios -->
-    <section id="testimonios" class="testimonials section-padding bg-light">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2 class="section-title">Testimonios</h2>
-                <div class="title-divider center"></div>
-                <p class="section-subtitle">Lo que dicen nuestros pacientes sobre su experiencia y transformación.</p>
-            </div>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                            class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"El Dr. Wilmer me dio muchísima confianza desde la primera consulta. Mi
-                        lipoescultura quedó increíble y súper natural. ¡Lo recomiendo al 100%!"</p>
-                    <div class="patient-name">- María G.</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                            class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Excelente profesional. Se nota la experiencia y la preocupación por el
-                        detalle. El resultado de mi aumento mamario fue exactamente lo que quería."</p>
-                    <div class="patient-name">- Laura P.</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                            class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"La atención post-operatoria fue impecable. Siempre atentos a mi
-                        recuperación. Me sentí segura en todo momento con todo su equipo de trabajo."</p>
-                    <div class="patient-name">- Camila S.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contacto" class="contact section-padding">
-        <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h2 class="section-title">Contacto</h2>
-                    <div class="title-divider"></div>
-                    <p>Estás a un paso de comenzar tu transformación. Contáctanos y agendaremos tu consulta para diseñar
-                        el mejor plan para ti.</p>
-
-                    <ul class="contact-details">
-                        <li>
-                            <a href="https://wa.me/541134180502" target="_blank" class="wa-link"
-                                style="color: inherit; text-decoration: none; display: flex; align-items: flex-start; gap: 15px;">
-                                <i class="fab fa-whatsapp"></i>
-                                <div>
-                                    <strong>WhatsApp</strong>
-                                    <span>+54 11 3418 0502</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/dr.wilmerjimenez" target="_blank" class="ig-link"
-                                style="color: inherit; text-decoration: none; display: flex; align-items: flex-start; gap: 15px;">
-                                <i class="fab fa-instagram"></i>
-                                <div>
-                                    <strong>Instagram</strong>
-                                    <span>@dr.wilmerjimenez</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.google.com/maps/search/?api=1&query=Cnel.+Niceto+Vega+4647,+C1414BEA+Ciudad+Autónoma+de+Buenos+Aires,+Argentina"
-                                target="_blank"
-                                style="color: inherit; text-decoration: none; display: flex; align-items: flex-start; gap: 15px;">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <strong>Ubicación</strong>
-                                    <span>Cnel. Niceto Vega 4647, C1414BEA Ciudad Autónoma de Buenos Aires,
-                                        Argentina</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="contact-form-container">
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-group">
-                            <label for="nombre">Nombre completo</label>
-                            <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
-                        </div>
-                        <div class="form-group">
-                            <label for="telefono">Teléfono</label>
-                            <input type="tel" id="telefono" name="telefono" required
-                                placeholder="Tu número de teléfono">
-                        </div>
-                        <div class="form-group">
-                            <label for="mensaje">Mensaje</label>
-                            <textarea id="mensaje" name="mensaje" rows="4" required
-                                placeholder="¿En qué procedimiento estás interesada/o?"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Agendar consulta</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-col">
-                <h3>Dr. Wilmer Jimenez</h3>
-                <p>Cirugía estética y reconstructiva enfocada en resultados naturales, seguros y personalizados. Tu
-                    bienestar es nuestra prioridad.</p>
-            </div>
-            <div class="footer-col">
-                <h3>Servicios Médicos</h3>
-                <ul>
-                    <li><a href="#procedimientos">Lipoescultura (Tradicional y HD)</a></li>
-                    <li><a href="#procedimientos">Aumento mamario</a></li>
-                    <li><a href="#procedimientos">Dermolipectomía</a></li>
-                    <li><a href="#procedimientos">Lipopapada</a></li>
-                    <li><a href="#procedimientos">Cirugía corporal estética</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Contacto</h3>
-                <ul>
-                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/541134180502" target="_blank">+54 11 3418
-                            0502</a></li>
-                    <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/dr.wilmerjimenez"
-                            target="_blank">@dr.wilmerjimenez</a></li>
-                    <li><i class="fas fa-map-marker-alt"></i> <a
-                            href="https://www.google.com/maps/search/?api=1&query=Cnel.+Niceto+Vega+4647,+C1414BEA+Ciudad+Autónoma+de+Buenos+Aires,+Argentina"
-                            target="_blank">Cnel. Niceto Vega 4647</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2026 Dr. Wilmer Jimenez. Todos los derechos reservados.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.instagram.com/dr.wilmerjimenez" target="_blank" aria-label="Instagram"><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                </div>
-            </div>
+            <p class="copyright">© 2026 Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/541134180502" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- AOS Animation Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        document.querySelectorAll('.section-title, .section-subtitle').forEach(el => el.setAttribute('data-aos', 'fade-up'));
-        document.querySelectorAll('.result-item, .procedure-card, .testimonial-card').forEach((el, index) => {
-            el.setAttribute('data-aos', 'zoom-in');
-            el.setAttribute('data-aos-delay', (index % 3) * 100);
-        });
-        document.querySelectorAll('.about-image, .contact-form, .info-item').forEach(el => el.setAttribute('data-aos', 'fade-right'));
-        document.querySelectorAll('.about-content, .contact-details').forEach(el => el.setAttribute('data-aos', 'fade-left'));
-        document.querySelectorAll('video').forEach(el => el.setAttribute('data-aos', 'fade-up'));
-
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 50,
-            easing: 'ease-out-cubic'
-        });
-    </script>
     <script src="script.js"></script>
 </body>
-
 </html>
