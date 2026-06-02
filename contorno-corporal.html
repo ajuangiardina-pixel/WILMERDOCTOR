@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contorno Corporal | Dr. Wilmer Jiménez</title>
+    <meta name="description" content="Procedimientos de contorno corporal con el Dr. Wilmer Jiménez: lipoescultura y dermolipectomías. Resultados naturales y proporcionados en Buenos Aires.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <style>
+        .proc-page-hero { position: relative; padding: 140px 0 80px; background: linear-gradient(135deg, #0D2B40 0%, #1B4965 60%, #0D2B40 100%); color: #fff; overflow: hidden; }
+        .proc-page-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 30%, rgba(98,182,203,.22), transparent 45%), radial-gradient(circle at 80% 70%, rgba(98,182,203,.15), transparent 45%); pointer-events: none; }
+        .proc-page-hero::after { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 50px 50px; mask: radial-gradient(ellipse at center, #000 30%, transparent 75%); pointer-events: none; }
+        .proc-page-hero .container { position: relative; z-index: 1; }
+        .breadcrumb { display: flex; gap: 8px; align-items: center; font-size: 0.85rem; color: rgba(255,255,255,.7); margin-bottom: 18px; flex-wrap: wrap; }
+        .breadcrumb a { color: rgba(255,255,255,.7); text-decoration: none; transition: color .25s; }
+        .breadcrumb a:hover { color: #fff; }
+        .breadcrumb i { font-size: 0.7rem; opacity: .5; }
+        .proc-page-hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; margin-bottom: 14px; line-height: 1.1; letter-spacing: -1px; max-width: 800px; }
+        .proc-page-hero p.lead { font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,.85); max-width: 720px; font-weight: 400; }
+        .sub-proc-section { padding: 70px 0; border-bottom: 1px solid #e9ecef; }
+        .sub-proc-section:nth-child(even) { background: #f8f9fa; }
+        .sub-proc-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: center; max-width: 1100px; margin: 0 auto; }
+        .sub-proc-section:nth-child(even) .sub-proc-grid { grid-template-columns: 1.2fr 1fr; }
+        .sub-proc-section:nth-child(even) .sub-proc-img-wrap { order: 2; }
+        .sub-proc-img-wrap { position: relative; }
+        .sub-proc-img { position: relative; width: 100%; aspect-ratio: 4/3; border-radius: 14px; overflow: hidden; background: linear-gradient(135deg, #1B4965 0%, #0D2B40 60%, #1B4965 100%); background-size: cover; background-position: center; box-shadow: 0 16px 36px rgba(27,73,101,.3); display: flex; align-items: center; justify-content: center; }
+        .sub-proc-img::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 30% 25%, rgba(98,182,203,.3), transparent 45%), radial-gradient(circle at 70% 75%, rgba(255,255,255,.1), transparent 45%); }
+        .sub-proc-img.has-photo::before { display: none; }
+        .sub-proc-img.has-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 0%, transparent 60%, rgba(13,43,64,.55) 100%); pointer-events: none; }
+        .sub-proc-img-em { position: relative; z-index: 2; font-size: 7rem; line-height: 1; filter: drop-shadow(0 8px 20px rgba(0,0,0,.4)); }
+        .sub-proc-label { position: absolute; bottom: 14px; left: 16px; z-index: 2; font-size: 0.72rem; color: rgba(255,255,255,.75); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; }
+        .sub-proc-content h2 { font-size: 2rem; color: var(--clr-medical-blue); margin-bottom: 14px; font-weight: 700; line-height: 1.15; }
+        .sub-proc-content .desc { font-size: 1rem; color: #555; line-height: 1.8; margin-bottom: 18px; }
+        .sub-proc-includes { margin: 20px 0 22px; padding: 18px 20px; border-radius: 10px; background: rgba(98,182,203,.08); border-left: 3px solid #62b6cb; }
+        .sub-proc-includes h4 { font-size: 0.85rem; color: var(--clr-medical-blue); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; font-weight: 700; }
+        .sub-proc-includes ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+        .sub-proc-includes li { font-size: 0.92rem; color: #555; padding-left: 22px; position: relative; line-height: 1.5; }
+        .sub-proc-includes li::before { content: '✓'; position: absolute; left: 0; color: var(--clr-medical-blue); font-weight: 700; }
+        .sub-proc-meta { display: flex; gap: 22px; flex-wrap: wrap; margin-bottom: 20px; }
+        .sub-proc-meta .meta-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #777; }
+        .sub-proc-meta .meta-item i { color: var(--clr-medical-blue); }
+        .sub-proc-meta .meta-item strong { color: var(--clr-medical-blue); font-weight: 600; }
+        .btn-presupuesto { display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; border-radius: 50px; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: #fff; font-weight: 700; font-size: 0.95rem; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 10px 22px rgba(37,211,102,.35); transition: transform .25s, box-shadow .25s; }
+        .btn-presupuesto:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(37,211,102,.5); }
+        .btn-presupuesto i { font-size: 1.2rem; }
+        .final-cta { padding: 70px 0; text-align: center; background: linear-gradient(135deg, #0D2B40 0%, #1B4965 100%); color: #fff; }
+        .final-cta h2 { font-size: 2rem; margin-bottom: 14px; font-weight: 700; }
+        .final-cta p { font-size: 1rem; color: rgba(255,255,255,.85); margin-bottom: 26px; max-width: 580px; margin-left: auto; margin-right: auto; }
+        .back-link { display: inline-flex; align-items: center; gap: 8px; padding: 50px 0 0; color: var(--clr-medical-blue); text-decoration: none; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: gap .25s; }
+        .back-link:hover { gap: 14px; }
+        @media (max-width: 768px) { .sub-proc-grid, .sub-proc-section:nth-child(even) .sub-proc-grid { grid-template-columns: 1fr; gap: 30px; } .sub-proc-section:nth-child(even) .sub-proc-img-wrap { order: 0; } .sub-proc-content h2 { font-size: 1.5rem; } .sub-proc-img-em { font-size: 5rem; } }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; padding: 5px 0;" title="Dr. Wilmer Jimenez - Inicio">
+                <img src="favicon.png" alt="Logo corporativo Dr. Wilmer Jimenez" title="Dr. Wilmer Jimenez" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px;">
+            </a>
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+                    <li><a href="index.html#procedimientos">Procedimientos</a></li>
+                    <li><a href="index.html#resultados">Resultados</a></li>
+                    <li><a href="index.html#seguridad">Seguridad</a></li>
+                    <li><a href="index.html#testimonios">Testimonios</a></li>
+                </ul>
+            </nav>
+            <a href="index.html#contacto" class="btn btn-outline nav-btn">Contacto</a>
+            <button class="menu-toggle" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <section class="proc-page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a><i class="fas fa-chevron-right"></i>
+                <a href="index.html#procedimientos">Procedimientos</a><i class="fas fa-chevron-right"></i>
+                <span>Contorno corporal</span>
+            </div>
+            <h1>Contorno Corporal</h1>
+            <p class="lead">Procedimientos quirúrgicos para redefinir y esculpir la silueta corporal. Trabajamos sobre las áreas que más te molestan para lograr proporciones armónicas y un cuerpo más definido. Cada plan se diseña a medida según tus objetivos, anatomía y estilo de vida.</p>
+        </div>
+    </section>
+
+    <!-- Lipoescultura -->
+    <section class="sub-proc-section">
+        <div class="container">
+            <div class="sub-proc-grid">
+                <div class="sub-proc-img-wrap">
+                    <div class="sub-proc-img has-photo" style="background-image: url('lipoes.jpg'); background-position: 55% center;">
+                        <span class="sub-proc-label">Lipoescultura</span>
+                    </div>
+                </div>
+                <div class="sub-proc-content">
+                    <h2>Lipoescultura</h2>
+                    <p class="desc">Técnica que retira el exceso de grasa localizada en distintas zonas del cuerpo (abdomen, flancos, espalda, brazos, muslos) y redefine los contornos. Ideal para quienes ya tienen un peso estable pero les molestan acumulaciones específicas. Permite esculpir la silueta de forma natural y proporcionada, modelando el cuerpo según el plan estético acordado con el paciente.</p>
+                    <div class="sub-proc-meta">
+                        <div class="meta-item"><i class="fas fa-clock"></i> Duración: <strong>2-4 horas</strong></div>
+                        <div class="meta-item"><i class="fas fa-bed"></i> Recuperación: <strong>10-15 días</strong></div>
+                        <div class="meta-item"><i class="fas fa-user-md"></i> Anestesia general</div>
+                    </div>
+                    <div class="sub-proc-includes">
+                        <h4>El procedimiento incluye</h4>
+                        <ul>
+                            <li>Evaluación pre-quirúrgica y marcación corporal</li>
+                            <li>Cirugía en quirófano con anestesiólogo titular</li>
+                            <li>Faja compresiva post-operatoria</li>
+                            <li>Drenajes linfáticos recomendados (a definir)</li>
+                            <li>Controles post-operatorios programados</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/541134180502?text=Hola%20Dr.%2C%20quiero%20consultar%20el%20presupuesto%20para%20Lipoescultura." target="_blank" class="btn-presupuesto">
+                        <i class="fab fa-whatsapp"></i> Solicitar presupuesto
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dermolipectomías -->
+    <section class="sub-proc-section">
+        <div class="container">
+            <div class="sub-proc-grid">
+                <div class="sub-proc-img-wrap">
+                    <div class="sub-proc-img has-photo" style="background-image: url('dermi-2026-06-01-20-52-25.jpg');">
+                        <span class="sub-proc-label">Dermolipectomías</span>
+                    </div>
+                </div>
+                <div class="sub-proc-content">
+                    <h2>Dermolipectomías</h2>
+                    <p class="desc">Cirugía que retira el exceso de piel y grasa, ideal para pacientes con flacidez post-embarazo o tras grandes descensos de peso. Restaura la firmeza y reposiciona los tejidos, devolviendo al cuerpo proporciones armónicas. Se puede realizar en abdomen, brazos, muslos u otras zonas según necesidad, e incluye también la variante circunferencial para casos más extensos.</p>
+                    <div class="sub-proc-meta">
+                        <div class="meta-item"><i class="fas fa-clock"></i> Duración: <strong>3-5 horas</strong></div>
+                        <div class="meta-item"><i class="fas fa-bed"></i> Recuperación: <strong>3-4 semanas</strong></div>
+                        <div class="meta-item"><i class="fas fa-user-md"></i> Anestesia general</div>
+                    </div>
+                    <div class="sub-proc-includes">
+                        <h4>El procedimiento incluye</h4>
+                        <ul>
+                            <li>Evaluación clínica y estudios complementarios</li>
+                            <li>Planificación quirúrgica personalizada</li>
+                            <li>Cirugía en quirófano habilitado</li>
+                            <li>Faja compresiva y seguimiento intensivo</li>
+                            <li>Controles post-operatorios hasta la recuperación total</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/541134180502?text=Hola%20Dr.%2C%20quiero%20consultar%20el%20presupuesto%20para%20Dermolipectomía." target="_blank" class="btn-presupuesto">
+                        <i class="fab fa-whatsapp"></i> Solicitar presupuesto
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2>¿Lista/o para tu transformación?</h2>
+            <p>Agendá tu valoración personalizada con el Dr. Wilmer Jiménez y descubrí qué procedimiento se adapta mejor a vos.</p>
+            <a href="https://wa.me/541134180502?text=Hola%20Dr.%2C%20quiero%20agendar%20una%20valoraci%C3%B3n%20para%20contorno%20corporal." target="_blank" class="btn-presupuesto" style="font-size: 1.05rem; padding: 16px 32px;">
+                <i class="fab fa-whatsapp"></i> Agendar valoración
+            </a>
+            <div style="margin-top: 30px;">
+                <a href="index.html#procedimientos" class="back-link" style="color: rgba(255,255,255,.7); padding: 0;">
+                    <i class="fas fa-arrow-left"></i> Volver a procedimientos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>Dr. Wilmer Jimenez</h3>
+                <p>Cirugía estética y reconstructiva enfocada en resultados naturales, seguros y personalizados. Tu bienestar es nuestra prioridad.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Procedimientos</h3>
+                <ul>
+                    <li><a href="cirugia-facial.html">Cirugía facial</a></li>
+                    <li><a href="rejuvenecimiento-facial.html">Rejuvenecimiento facial</a></li>
+                    <li><a href="contorno-corporal.html">Contorno corporal</a></li>
+                    <li><a href="mamoplastias.html">Mamoplastias</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/541134180502" target="_blank">+54 11 3418 0502</a></li>
+                    <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/dr.wilmerjimenez" target="_blank">@dr.wilmerjimenez</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps/search/?api=1&query=Cnel.+Niceto+Vega+4647,+C1414BEA+Ciudad+Autónoma+de+Buenos+Aires,+Argentina" target="_blank">Cnel. Niceto Vega 4647</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Dr. Wilmer Jimenez. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="https://wa.me/541134180502" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/dr.wilmerjimenez" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/541134180502" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true, offset: 50, easing: 'ease-out-cubic' });</script>
+</body>
+
+</html>
